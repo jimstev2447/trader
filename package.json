@@ -1,0 +1,11 @@
+{
+  "name": "trader_app",
+  "version": "1.0.0",
+  "description": "backend server for magic trading app",
+  "main": "app.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "JimStev",
+  "license": "ISC"
+}
