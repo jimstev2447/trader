@@ -6,7 +6,7 @@ readFile("./db/data/scryfall-cards.json", "utf8", (err, data) => {
   onlyM20 = workingData.filter(card => {
     return card.set === "m20" && card.rarity === "rare";
   });
-
+  console.log(onlyM20[0]);
   onlym20RareCardNames = onlyM20.map(
     ({ name, rarity, mana_cost, oracle_text, image_uris }) => {
       let returningCardObj = {
@@ -20,5 +20,5 @@ readFile("./db/data/scryfall-cards.json", "utf8", (err, data) => {
     }
   );
 
-  console.log(onlym20RareCardNames);
+  //console.log(onlym20RareCardNames);
 });
