@@ -4,6 +4,9 @@
   "description": "backend server for magic trading app",
   "main": "app.js",
   "scripts": {
+    "setup-dev-db": "psql -f ./db/setup-dev.sql",
+    "setup-test-db": "psql -f ./db/setup-test.sql",
+    "seed-test": "npm run setup-test-db && NODE_ENV=test knex seed:run",
     "test": "mocha ./spec"
   },
   "author": "JimStev",
@@ -11,5 +14,9 @@
   "devDependencies": {
     "chai": "^4.2.0",
     "mocha": "^6.2.2"
+  },
+  "dependencies": {
+    "knex": "^0.20.1",
+    "pg": "^7.12.1"
   }
 }
